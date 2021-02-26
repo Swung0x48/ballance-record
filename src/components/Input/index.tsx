@@ -1,12 +1,11 @@
 import React from 'react'
-import './index.css'
+import styles from './index.module.css'
 
-interface Props {
-    [key: string]: any
+interface Props extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
 }
 const Input: React.FC<Props> = (props) => {
     return (
-        <input className="input" {...props}></input>
+        <input className={`${styles.input}`} {...props} />
     )
 }
 

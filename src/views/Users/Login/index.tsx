@@ -1,14 +1,16 @@
 import React from 'react'
-import { Input } from 'components'
-import './index.css'
+import { Input, Button } from 'components'
+import styles from './index.module.css'
 
 export default () => {
     return (
-        <form className="login">
-            <p className="title">Login</p>
-            <Input type="email"/>
+        <form className={`${styles.login}`}>
+            <p className={`${styles.title}`}>Login</p>
+            <Input type="email" placeholder={"Email"}/>
             <br />
-            <Input type="password"/>
+            <Input type="password" placeholder={"Password"}/>
+            <br />
+            <Button>Login</Button>
         </form>
     )
 }

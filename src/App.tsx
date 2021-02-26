@@ -5,16 +5,22 @@ import {
     Route,
     Link
 } from 'react-router-dom'
-import './index.css'
+import {Button, Navbar, UserWidget} from './components'
+import './App.css'
 
 const App: React.FC = () => {
     return (
         <Router>
             <div className="app">
-                <div className="nav">
-                    <Link to="/login"><button>Log In</button></Link>
-                    <Link to="/signup"><button>Sign up</button></Link>
-                </div>
+                <Navbar leftElement={<span>BallanceRecord Home SpeedRun Highscore</span>} rightElement={<UserWidget />}/>
+                {/*<div className="nav">*/}
+                {/*    <Link to="/login">*/}
+                {/*        <Button>Log In</Button>*/}
+                {/*    </Link>*/}
+                {/*    <Link to="/signup">*/}
+                {/*        <Button>Sign Up</Button>*/}
+                {/*    </Link>*/}
+                {/*</div>*/}
                 <Switch>
                     <Suspense fallback={<div>Loading……</div>}>
                         <Route path="/login" component={ lazy(() => import('./views/Users/Login')) } />
