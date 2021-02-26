@@ -1,0 +1,10 @@
+.input {
+    background-color: #2727274f;
+    border: none;
+    font-size: 2rem;
+    font-family: 'Squarish Sans CT Regular SC';
+}
+
+.input:focus {
+    outline: none;
+}
