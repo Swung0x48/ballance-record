@@ -6,7 +6,7 @@ interface Props {
     rightElement: React.ReactNode
 }
 
-const Navbar: React.FC<Props> = (props) => {
+const Navbar: React.FC<Props> = props => {
     return (
         <div className={`${styles.nav}`}>
             <span className={`${styles.left}`}>{props.leftElement}</span>

@@ -7,16 +7,16 @@ interface Props {
 
 }
 
-const UserWidget: React.FC<Props> = (props) => {
+const UserWidget: React.FC<Props> = props => {
     return (
-        <div className={`${styles.nav}`}>
-            <Link to="/login">
-                <Button>Log In</Button>
+        <React.Fragment>
+            <Link className={`${styles.link}`} to="/login">
+                Log In
             </Link>
-            <Link to="/signup">
-                <Button>Sign Up</Button>
+            <Link className={`${styles.link}`} to="/signup">
+                Sign Up
             </Link>
-        </div>)
+        </React.Fragment>)
 }
 
 export default UserWidget

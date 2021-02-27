@@ -11,6 +11,7 @@ export default () => {
             <Input type="password" placeholder={"Password"}/>
             <br />
             <Button>Login</Button>
+            <Button type="reset">Reset</Button>
         </form>
     )
 }
