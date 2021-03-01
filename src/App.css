@@ -3,6 +3,11 @@
     src: url('./assets/font.ttf');
 }
 
-body {
+html, body, #root {
     margin: 0;
+    height: 100%;
+}
+
+#root {
+    /*background: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Bsodwindows10.png');*/
 }
