@@ -4,21 +4,16 @@ import styles from './index.module.css'
 import { useTranslation } from 'react-i18next'
 
 const Login = () => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     return (
         <form className={`${styles.login}`}>
             <div className={`${styles.title}`}>{t("LOGIN")}</div>
-            <Input type="email" placeholder={"Email"}/>
+            <Input type="email" placeholder={t("EMAIL")}/>
             <br />
-            <Input type="password" placeholder={"Password"}/>
+            <Input type="password" placeholder={t("PASSWORD")}/>
             <br />
-            <Button>Login</Button>
-            <Button type="reset">Reset</Button>
-            <Button
-                onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'zh' : 'en')}
-            >
-                {i18n.language}
-            </Button>
+            <Button>{t("LOGIN")}</Button>
+            <Button type="reset">{t("RESET")}</Button>
         </form>
     )
 }
