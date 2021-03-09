@@ -12,6 +12,9 @@ i18n
         resources,
         fallbackLng: 'en',
         keySeparator: false,
+        react: {
+            useSuspense: false
+        },
         interpolation: {
             escapeValue: false
         }
