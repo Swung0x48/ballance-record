@@ -4,20 +4,22 @@ import {
     Switch,
     Route
 } from 'react-router-dom'
-import {Button, Menu, Navbar, UserWidget, Dropdown} from 'components'
 import {useTranslation} from 'react-i18next'
 import styles from './index.module.css'
+import {Menu, Dropdown} from 'components'
+import Navbar from './Navbar'
+import UserWidget from './UserWidget'
 
-const Index: React.FC = () => {
-    const { t, i18n } = useTranslation()
+export default function App() {
+    const { t } = useTranslation()
     return (
-        <Router>
-            <React.Fragment>
+        <React.Fragment>
+            <Router>
                 <Navbar
                     leftElement={
                         <React.Fragment>
-                            <Menu className={`${styles.home}`} to="/">BallanceRecord</Menu>
-                            <span>{t("RECORDS")} {/* TODO: Make it a dropdown*/}</span>
+                            <Menu className={`${styles.home}`} to="/">BallanceLive</Menu>
+                            <Dropdown >{t("RECORDS")}</Dropdown>
                             <Menu to="/stats">{t("STATS")}</Menu>
                             <Menu to="/admin">{t("ADMIN")}</Menu>
                         </React.Fragment>
@@ -25,7 +27,6 @@ const Index: React.FC = () => {
                     rightElement={
                         <React.Fragment>
                             <UserWidget/>
-                            <Dropdown title={"test"} />
                             {/*<a onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'zh-CN' : 'en')}>*/}
                             {/*    ↓{i18n.language}↓*/}
                             {/*</a>*/}
@@ -38,9 +39,7 @@ const Index: React.FC = () => {
                         <Route path="/signup" component={ lazy(() => import('../Users/Signup')) } />
                     </Suspense>
                 </Switch>
-            </React.Fragment>
-        </Router>
+            </Router>
+        </React.Fragment>
     )
 }
-
-export default Index

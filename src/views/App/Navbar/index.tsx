@@ -6,12 +6,11 @@ interface Props {
     rightElement: React.ReactNode
 }
 
-const Navbar: React.FC<Props> = props => {
+export default function Navbar(props: Props) {
     return (
         <div className={`${styles.nav}`}>
             <span className={`${styles.left}`}>{props.leftElement}</span>
             <span className={`${styles.right}`}>{props.rightElement}</span>
-        </div>)
+        </div>
+    )
 }
-
-export default Navbar

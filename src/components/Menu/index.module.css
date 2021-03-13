@@ -1,8 +1,12 @@
 .link {
+    display: inline-block;
+    padding: 5px;
     font-family: 'Squarish Sans CT Regular SC', sans-serif;
     font-size: 1em;
     color: white;
-    vertical-align: middle;
-    padding: 1em;
     text-decoration: none;
+}
+
+.link:hover {
+    background: black;
 }

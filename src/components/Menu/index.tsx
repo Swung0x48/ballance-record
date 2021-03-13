@@ -6,12 +6,11 @@ interface Props extends LinkProps {
 
 }
 
-const Menu: React.FC<Props> = props => {
+export default function Menu(props: Props) {
+    const className = (props.className ? props.className + ' ' : '') + `${styles.link}`
     return (
-        <Link className={`${styles.link}`} {...props}>
+        <Link {...props} className={className}>
             {props.children}
         </Link>
     )
 }
-
-export default Menu

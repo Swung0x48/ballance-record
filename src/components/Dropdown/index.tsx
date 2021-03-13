@@ -1,21 +1,30 @@
 import React from 'react'
 import styles from './index.module.css'
+import {Menu} from 'components'
 
 interface Props {
-    title: string
+    title?: string
+    children: React.ReactNode
 }
 
-const Dropdown: React.FC<Props> = props => {
+export default function Dropdown(props: Props) {
+    // return (
+    //     <div className={`${styles.dropdown}`}>
+    //         <button className={`${styles.dropbtn}`}>{props.title}</button>
+    //         <div className={`${styles.dropdownContent}`}>
+    //             <a href="#">Link 1</a>
+    //             <a href="#">Link 2</a>
+    //             <a href="#">Link 3</a>
+    //         </div>
+    //     </div>
+    // )
     return (
         <div className={`${styles.dropdown}`}>
-            <button className={`${styles.dropbtn}`}>{props.title}</button>
+            <Menu to="#">{props.children}</Menu>
             <div className={`${styles.dropdownContent}`}>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <Menu to="#">ab</Menu>
+                <Menu to="#">cd</Menu>
             </div>
         </div>
     )
 }
-
-export default Dropdown

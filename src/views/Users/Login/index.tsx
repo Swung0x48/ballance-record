@@ -1,12 +1,16 @@
 import React from 'react'
 import { Input, Button } from 'components'
-import styles from './index.module.css'
+import styles from '../index.module.css'
 import { useTranslation } from 'react-i18next'
 
-const Login = () => {
+interface Props {
+
+}
+
+export default function Login(props: Props) {
     const { t } = useTranslation()
     return (
-        <form className={`${styles.login}`}>
+        <form className={`${styles.center}`}>
             <div className={`${styles.title}`}>{t("LOGIN")}</div>
             <Input type="email" placeholder={t("EMAIL")}/>
             <br />
@@ -17,5 +21,3 @@ const Login = () => {
         </form>
     )
 }
-
-export default Login

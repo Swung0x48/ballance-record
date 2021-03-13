@@ -1,15 +1,14 @@
 import React from 'react'
 import styles from './index.module.css'
 
-interface Props extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
-const Button: React.FC<Props> = (props) => {
+export default function Button(props: Props) {
+    const className = (props.className ? props.className + ' ' : '') + `${styles.button}`
     return (
-        <button className={`${styles.button}`} {...props}>
+        <button {...props} className={className}>
             {props.children}
         </button>
     )
 }
-
-export default Button
