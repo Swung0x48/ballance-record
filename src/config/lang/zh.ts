@@ -6,7 +6,10 @@ let zh = {
     "NICKNAME": "昵称",
     "PASSWORD": "密码",
     "CONFIRM_PASSWORD": "确认密码",
-    "RESET": "重置"
+    "RESET": "重置",
+    "RECORDS": "记录",
+    "STATS": "状态",
+    "ADMIN": "管理"
 }
 
 export default zh
