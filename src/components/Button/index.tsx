@@ -5,7 +5,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function Button(props: Props) {
-    const className = (props.className ? props.className + ' ' : '') + `${styles.button}`
+    const className = `${styles.button}` + (props.className ? ' ' + props.className: '')
     return (
         <button {...props} className={className}>
             {props.children}

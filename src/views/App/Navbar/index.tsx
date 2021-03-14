@@ -9,8 +9,8 @@ interface Props {
 export default function Navbar(props: Props) {
     return (
         <div className={`${styles.nav}`}>
-            <span className={`${styles.left}`}>{props.leftElement}</span>
-            <span className={`${styles.right}`}>{props.rightElement}</span>
+            <span className={`${styles.flex}`}>{props.leftElement}</span>
+            <span className={`${styles.flex}`}>{props.rightElement}</span>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import {Menu} from 'components'
 import {useTranslation} from 'react-i18next'
+import Menu from '../Menu'
 
 interface Props {
 

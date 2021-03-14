@@ -1,8 +1,7 @@
 .center {
-    text-align: center;
-
     width: 70%;
-    height: calc(100% - 1.5em - 6px);
+    height: 100%;
+    text-align: center;
     margin: auto;
     border: gray solid 1px;
     border-top: none;

@@ -6,9 +6,10 @@ import {
 } from 'react-router-dom'
 import {useTranslation} from 'react-i18next'
 import styles from './index.module.css'
-import {Menu, Dropdown} from 'components'
 import Navbar from './Navbar'
 import UserWidget from './UserWidget'
+import Menu from './Menu'
+import Dropdown from './Dropdown'
 
 export default function App() {
     const { t } = useTranslation()
@@ -19,7 +20,10 @@ export default function App() {
                     leftElement={
                         <React.Fragment>
                             <Menu className={`${styles.home}`} to="/">BallanceLive</Menu>
-                            <Dropdown >{t("RECORDS")}</Dropdown>
+                            <Dropdown title={t("RECORDS")}>
+                                <Menu to="/a">a</Menu>
+                                <Menu to="/b">b</Menu>
+                            </Dropdown>
                             <Menu to="/stats">{t("STATS")}</Menu>
                             <Menu to="/admin">{t("ADMIN")}</Menu>
                         </React.Fragment>
@@ -35,6 +39,7 @@ export default function App() {
                 />
                 <Switch>
                     <Suspense fallback={<div>Loading……</div>}>
+                        <Route path="/stats" component={ lazy(() => import('../Stats')) } />
                         <Route path="/login" component={ lazy(() => import('../Users/Login')) } />
                         <Route path="/signup" component={ lazy(() => import('../Users/Signup')) } />
                     </Suspense>

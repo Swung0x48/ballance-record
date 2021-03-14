@@ -1,7 +1,7 @@
 import React from 'react'
-import { Input, Button } from 'components'
-import styles from '../index.module.css'
 import { useTranslation } from 'react-i18next'
+import styles from '../index.module.css'
+import { Input, Button } from 'components'
 
 interface Props {
 

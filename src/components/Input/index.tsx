@@ -5,7 +5,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 export default function Input(props: Props) {
-    const className = (props.className ? props.className + ' ' : '') + `${styles.input}`
+    const className = `${styles.input}` + (props.className ? ' ' + props.className : '')
     return (
         <input {...props} className={className} />
     )
