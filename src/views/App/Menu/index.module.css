@@ -1,0 +1,16 @@
+.link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+
+    padding: 5px;
+    font-family: 'Squarish Sans CT Regular SC', sans-serif;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover {
+    background: black;
+}

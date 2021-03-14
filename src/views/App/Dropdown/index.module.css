@@ -1,0 +1,16 @@
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background: #68282870;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
