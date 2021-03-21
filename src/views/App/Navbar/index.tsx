@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './index.module.css'
 
 interface Props {
     leftElement: React.ReactNode,
@@ -8,9 +7,9 @@ interface Props {
 
 export default function Navbar(props: Props) {
     return (
-        <div className={`${styles.nav}`}>
-            <span className={`${styles.flex}`}>{props.leftElement}</span>
-            <span className={`${styles.flex}`}>{props.rightElement}</span>
+        <div className="flex justify-between w-full text bg-primary">
+            <span className="flex">{props.leftElement}</span>
+            <span className="flex">{props.rightElement}</span>
         </div>
     )
 }

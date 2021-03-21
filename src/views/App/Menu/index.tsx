@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './index.module.css'
 import {Link, LinkProps} from 'react-router-dom'
 
 interface Props extends LinkProps {
@@ -7,7 +6,8 @@ interface Props extends LinkProps {
 }
 
 export default function Menu(props: Props) {
-    const className = `${styles.link}` + (props.className ? ' ' + props.className : '')
+    const className = "flex items-center box-border p-2 font-game text-sm text-white hover:bg-black"
+                      + (props.className ? ' ' + props.className : '')
     return (
         <Link {...props} className={className}>
             {props.children}

@@ -8,6 +8,7 @@ let en = {
     "CONFIRM_PASSWORD": "Confirm Password",
     "RESET": "Reset",
     "RECORDS": "Records",
+    "MAPS": "Maps",
     "STATS": "Stats",
     "ADMIN": "Admin"
 }

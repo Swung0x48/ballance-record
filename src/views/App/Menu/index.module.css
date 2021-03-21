@@ -11,6 +11,6 @@
     text-decoration: none;
 }
 
-.link:hover {
+.link:hover, .link:active {
     background: black;
 }

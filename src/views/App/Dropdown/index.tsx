@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './index.module.css'
 import Menu from '../Menu'
 
 interface Props {
@@ -9,9 +8,9 @@ interface Props {
 
 export default function Dropdown(props: Props) {
     return (
-        <span className={`${styles.dropdown}`}>
+        <span className="relative group">
             <Menu to="#">{props.title}</Menu>
-            <div className={`${styles['dropdown-content']}`}>
+            <div className="box-border w-full absolute bg-primary hidden group-hover:block">
                 {props.children}
             </div>
         </span>

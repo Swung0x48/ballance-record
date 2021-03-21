@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
+//import { useTranslation } from 'react-i18next'
 import styles from './index.module.css'
 import {Button} from 'components'
 
@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function Status(props: Props) {
-    const { t } = useTranslation()
+    //const { t } = useTranslation()
     return (
         <table className={`${styles.table}`}>
             <tr>

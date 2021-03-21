@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: 'Squarish Sans CT Regular SC';
     src: url('./assets/font.ttf');

@@ -8,6 +8,7 @@ let zh = {
     "CONFIRM_PASSWORD": "确认密码",
     "RESET": "重置",
     "RECORDS": "记录",
+    "MAPS": "地图",
     "STATS": "状态",
     "ADMIN": "管理"
 }
