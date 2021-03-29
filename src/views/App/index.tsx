@@ -105,17 +105,17 @@ export default function App() {
                 {/*    }*/}
                 {/*/>*/}
                 <div className="flex w-screen h-screen divide-x divide-black divide-opacity-10">
-                    <ul className={`${page1 == -1 ? 'w-full' : 'w-0'} ${page2 == -1 ? 'md:w-1/2' : 'md:w-0'} lg:w-60 overflow-hidden transition-all box-content bg-gray-800`}>
+                    <ul className={`${page1 === -1 ? 'w-full' : 'w-0'} ${page2 === -1 ? 'md:w-1/2' : 'md:w-0'} lg:w-60 overflow-hidden transition-all box-content bg-gray-800`}>
                         <Page1 />
                     </ul>
-                    <ul className={`${page1 != -1 && page2 == -1 ? 'w-full' : 'w-0'} ${page2 == -1 ? 'md:w-1/2' : 'md:w-0'} lg:w-60 overflow-hidden transition-all box-content bg-gray-800`}>
+                    <ul className={`${page1 !== -1 && page2 === -1 ? 'w-full' : 'w-0'} ${page2 === -1 ? 'md:w-1/2' : 'md:w-0'} lg:w-60 overflow-hidden transition-all box-content bg-gray-800`}>
                         <li className="md:hidden p-2 flex items-center space-x-1 hover:bg-gray-700" onClick={() => setPage1(-1)}>
                             <FontAwesomeIcon icon={faArrowLeft} size="2x" color="white" />
                             <div className="text-white text-2xl">Back</div>
                         </li>
                         <Page2 />
                     </ul>
-                    <div className={`${page2 != -1 ? 'w-full' : 'w-0'} transition-all flex-1`}>
+                    <div className={`${page2 !== -1 ? 'w-full' : 'w-0'} transition-all flex-1`}>
                         <Switch>
                             <Suspense fallback={<div>Loading……</div>}>
                                 <Route path="/stats" component={ lazy(() => import('../Records')) } />
